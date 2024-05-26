@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/file.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li> 
+                    <li><a href="#">About</a></li> 
+                    <li><a href="#">services</a></li> 
+                    <li><a href="#">protfolio</a></li> 
+                    <li><a href="#">contact</a></li> 
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>FullStack Java Devloper</p>
+                <h1>hi, I'm <span>Ashutosh</span><br> jena from India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/DAS_8620.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="sub-desc">I'm Ashutosh Jena, a dedicated Java Developer passionate about creating efficient and scalable software solutions.
+                     With a Master's degree in Computer Applications (MCA) earned in 2023, I've immersed myself in the world of Java development,
+                     continually striving to push the boundaries of what's possible.
+                    <br><br>
+                     Thank you for visiting my portfolio. Feel free to explore my projects,
+                     learn more about my skills and experience, and get in touch to discuss how we can work together to achieve your goals.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div> 
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span> UI/UX</span><br> Design Web And App Interface </li>
+                            <li><span> Web Devlopment</span><br> Web App Devlopment </li>
+                            <li><span>App Devlopment</span><br> Mobile App Devlopment </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> UI/UX</span><br> Design Web And App Interface </li>
+                            <li><span> Web Devlopment</span><br> Web App Devlopment </li>
+                            <li><span>App Devlopment</span><br> Mobile App Devlopment </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span> FullStack Devlopment</span><br> Completed From 360Digrii </li>
+                            <li><span> MCA </span><br> Completed From IGIT ,Saranga, Odisha</li>
+                            <li><span>Graduation</span><br> Completed From Utkal University,Bhubaneswar,Odisha </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName('tab-links');
+        var tabcontents=document.getElementsByClassName('tab-contents');
+        
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+
+</body>
+</html>
